@@ -1,0 +1,22 @@
+<button class="btn btn-primary"
+[disabled]="!allownewserver"
+(click)="serverstatusfn()">Add Server</button>
+
+<!--<input
+    type="text"
+    class="form-control"
+    (input)="EnteryourserverName($event)">
+<p>{{serverName}}</p>-->        <!--Event Binding-->
+
+
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
+<p *ngIf="ifservercreated">Server has been Created. Server name is {{serverName}}</p>
+<!--<p>{{serverName}}</p>-->
+
+<h3>{{servercreationstatus}}</h3>
+<app-server></app-server>
+<app-server></app-server>
+
